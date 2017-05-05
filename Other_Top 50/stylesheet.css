@@ -1,0 +1,53 @@
+body {
+	background-image: url(bgr.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: Futura;
+	padding:0px;
+}
+
+@font-face {
+    font-family: Futura;
+    src:url(FUTURAN.TTF);
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	background-color:transparent;
+	line-height: 2em;
+	padding: 0px;
+	margin: 10px auto 10px auto;
+	width: auto;
+	color: ##161F5F;
+	font-size:32px;
+}
+
+table, th, td {
+	table-layout: fixed;
+	margin: 0px auto 5px auto;
+	background-color: rgba(0,0,0,0.4);
+	color: #fff;
+	font-weight:bold;
+	font-size:20px;
+}
+
+th {
+	padding: 10px;
+}
+
+td {
+	padding: 5px;
+	text-align:center;
+	color: #fff;
+}
+
+img {
+	padding: 0px;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.day td {
+	padding: 0px;
+}

@@ -1,0 +1,83 @@
+body {
+	background-color: #F25F5C;
+	font-family: Futura;
+	padding:0px;
+}
+
+@font-face {
+    font-family: Futura;
+    src:url(FUTURAN.TTF);
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	background-color:transparent;
+	line-height: 2em;
+	padding: 0px;
+	margin: 10px auto 10px auto;
+	width: 870px;
+	color: #fff;
+}
+
+table, th, td {
+	table-layout: fixed;
+	margin: 0px auto 0px auto;
+	background-color: rgba(0,0,0,0.4);
+	color: #fff;
+	font-weight:bold;
+}
+
+th, td {
+	width: 150px;
+	padding: 5px;
+	color: #fff;
+}
+
+td {
+	font-size: 24px;
+	padding: 5px;
+	text-align:center;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	padding: 0px;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+a:link {
+	color: #fff;
+	text-decoration: none;
+}
+a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+a:active {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #daf;
+	text-decoration: none;
+}
+
+.day td {
+	padding: 0px;
+}
+
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color: #fff;
+	font-size:12px;
+	max-width:200px;
+	text-align:justify;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+	<title>Cal</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+$.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js')
+$(document).ready(function() {
+    var mouseXPadding = 20,
+        mouseYPadding = 10,
+        $tip = $('<p class="tooltip"></p>');
+
+    // Our helper function that moves "this" to the mouse
+    function moveToMouse(event) {
+        $(this).position({
+            my: "left+" + mouseXPadding + " top+" + mouseYPadding,
+            of: event,
+        });
+    }
+
+    // Moves tooltip out of the way if the mouse accidentally goes over it
+    $tip.mousemove(moveToMouse);
+
+    // Tooltip only Text
+    $('.masterTooltip').hover(function() {
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $tip.text(title);
+        if (!$.contains(document, $tip[0])) {
+            $tip.appendTo('body').fadeIn(0);
+        }
+    }, function(event) {
+        // Hover out code
+        // if the mouse exists to the tooltip, no need to hide it
+        if ($(event.toElement).hasClass('tooltip') === true) {
+            return;
+        }
+
+        // If we're here we need to hide things...
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+    }).mousemove(moveToMouse.bind($tip));
+});
+	</script>
+</head>
+<body>
+<div id="content">
+	<h1 style="color:#fff; font-size: 42px;">FALL 2018</h1>
+	<table>
+		<tr>
+			<th colspan="7" style="font-size:20px">CONTEMPORARY</th>
+		</tr>
+		<tr class="date">
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+		</tr>
+		<tr class="day">
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+		</tr>
+		<tr class="date">
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+		</tr>
+		<tr class="day">
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+			<td><img src="empty.png"></td>
+		</tr>
+</table>
+<table>
+		<tr>
+			<th colspan="7" style="font-size:20px">BACKLOG</th>
+		</tr>
+		<tr class="date">
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+		</tr>
+		<tr class="day">
+			<td><img src="15.jpg"></td>
+			<td><img src="16.jpg"></td>
+			<td><img src="17.jpg"></td>
+			<td><img src="18.jpg"></td>
+			<td><img src="19.jpg"></td>
+			<td><img src="20.jpg"></td>
+			<td><img src="21.jpg"></td>
+		</tr>
+		<tr class="date">
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+		</tr>
+		<tr class="day">
+			<td><img src="22.jpg"></td>
+			<td><img src="23.jpg"></td>
+			<td><img src="24.jpg"></td>
+			<td><img src="25.jpg"></td>
+			<td><img src="26.jpg"></td>
+			<td><img src="27.jpg"></td>
+			<td><img src="28.jpg"></td>
+		</tr>
+		<tr class="date">
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+			<td><span style="color:#fff; opacity:0">0</span></td>
+		</tr>
+		<tr class="day">
+			<td><img src="29.jpg"></td>
+			<td><img src="30.jpg"></td>
+			<td><img src="31.jpg"></td>
+			<td><img src="32.jpg"></td>
+			<td><img src="33.jpg"></td>
+			<td><img src="34.jpg"></td>
+			<td><img src="35.jpg"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!--
+1:  #802020
+2:  #cc0a0a
+3:  #ff5e0d
+4:  #ffaa00
+5:  #ffff26
+6:  #aaff00
+7:  #11a65b
+8:  #2ea8e6
+9:  #5639e6
+10: #993d99
+-->
