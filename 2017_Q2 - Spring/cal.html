@@ -10,7 +10,6 @@ $(document).ready(function() {
     var mouseXPadding = 20,
         mouseYPadding = 10,
         $tip = $('<p class="tooltip"></p>');
-
     // Our helper function that moves "this" to the mouse
     function moveToMouse(event) {
         $(this).position({
@@ -18,10 +17,8 @@ $(document).ready(function() {
             of: event,
         });
     }
-
     // Moves tooltip out of the way if the mouse accidentally goes over it
     $tip.mousemove(moveToMouse);
-
     // Tooltip only Text
     $('.masterTooltip').hover(function() {
         // Hover over code
@@ -37,7 +34,6 @@ $(document).ready(function() {
         if ($(event.toElement).hasClass('tooltip') === true) {
             return;
         }
-
         // If we're here we need to hide things...
         $(this).attr('title', $(this).data('tipText'));
         $('.tooltip').remove();
