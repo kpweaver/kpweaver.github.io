@@ -1,12 +1,12 @@
 body {
-	background-color: #F25F5C;
+	background-color: #F7D759;
 	font-family: Futura;
 	padding:0px;
 }
 
 @font-face {
     font-family: Futura;
-    src:url(FUTURAN.TTF);
+    src:url(ColabReg.otf);
 }
 
 h1 {
