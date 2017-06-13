@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+	<title>Charts</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+$.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js')
+$(document).ready(function() {
+    var mouseXPadding = 20,
+        mouseYPadding = 10,
+        $tip = $('<p class="tooltip"></p>');
+
+    // Our helper function that moves "this" to the mouse
+    function moveToMouse(event) {
+        $(this).position({
+            my: "left+" + mouseXPadding + " top+" + mouseYPadding,
+            of: event,
+        });
+    }
+
+    // Moves tooltip out of the way if the mouse accidentally goes over it
+    $tip.mousemove(moveToMouse);
+
+    // Tooltip only Text
+    $('.masterTooltip').hover(function() {
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $tip.text(title);
+        if (!$.contains(document, $tip[0])) {
+            $tip.appendTo('body').fadeIn(0);
+        }
+    }, function(event) {
+        // Hover out code
+        // if the mouse exists to the tooltip, no need to hide it
+        if ($(event.toElement).hasClass('tooltip') === true) {
+            return;
+        }
+
+        // If we're here we need to hide things...
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+    }).mousemove(moveToMouse.bind($tip));
+});
+	</script>
+</head>
+<body>
+<div id="content">
+	<h1 style="color:#fff; font-size: 42px;">SUMMER ESSENTIALS</h1>
+	<table>
+
+		<tr class="day">
+			<td><img src="1.jpg"></td>
+			<td><img src="2.jpg"></td>
+			<td><img src="3.jpg"></td>
+			<td><img src="4.jpg"></td>
+		</tr>
+		<tr class="day">
+			<td><img src="5.jpg"></td>
+			<td><img src="6.jpg"></td>
+			<td><img src="7.jpg"></td>
+			<td><img src="8.jpg"></td>
+		</tr>
+		<tr class="day">
+			<td><img src="9.jpg"></td>
+			<td><img src="10.jpg"></td>
+			<td><img src="11.jpg"></td>
+			<td><img src="12.jpg"></td>
+		</tr>
+		<tr class="day">
+			<td><img src="13.jpg"></td>
+			<td><img src="14.jpg"></td>
+			<td><img src="15.jpg"></td>
+			<td><img src="16.jpg"></td>
+		</tr>
+</table>
+</div>
+</body>
+
+<!--
+1:  #802020
+2:  #cc0a0a
+3:  #ff5e0d
+4:  #ffaa00
+5:  #ffff26
+6:  #aaff00
+7:  #11a65b
+8:  #2ea8e6
+9:  #5639e6
+10: #993d99
+-->
