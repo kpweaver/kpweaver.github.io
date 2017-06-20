@@ -40,6 +40,12 @@ table, th, td, tr {
 	width: 100%;
 }
 
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a:link {
 	color: #161F5F;
 	text-decoration: none;

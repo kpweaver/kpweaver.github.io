@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Charts</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+$.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js')
+$(document).ready(function() {
+    var mouseXPadding = 20,
+        mouseYPadding = 10,
+        $tip = $('<p class="tooltip"></p>');
+    // Our helper function that moves "this" to the mouse
+    function moveToMouse(event) {
+        $(this).position({
+            my: "left+" + mouseXPadding + " top+" + mouseYPadding,
+            of: event,
+        });
+    }
+    // Moves tooltip out of the way if the mouse accidentally goes over it
+    $tip.mousemove(moveToMouse);
+    // Tooltip only Text
+    $('.masterTooltip').hover(function() {
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $tip.text(title);
+        if (!$.contains(document, $tip[0])) {
+            $tip.appendTo('body').fadeIn(0);
+        }
+    }, function(event) {
+        // Hover out code
+        // if the mouse exists to the tooltip, no need to hide it
+        if ($(event.toElement).hasClass('tooltip') === true) {
+            return;
+        }
+        // If we're here we need to hide things...
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+    }).mousemove(moveToMouse.bind($tip));
+});
+	</script>
+
+
+<img height="750" width="750" src="rotation.jpg" class="center">
