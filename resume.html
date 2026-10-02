@@ -14,17 +14,17 @@
     .contact { margin-top: 6px; color: #4b5563; font-size: 15px; }
     h2 { margin: 28px 0 10px; padding-bottom: 5px; border-bottom: 1px solid #d1d5db; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
     .role { margin-top: 18px; }
-    .role-head { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
-    .company { font-weight: 700; }
+    .role-head, .title-row { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
+    .company, .title { font-weight: 700; }
     .location, .dates { color: #4b5563; font-size: 14px; white-space: nowrap; }
-    .title { font-weight: 700; margin-top: 2px; }
+    .title-row { margin-top: 2px; }
     ul { margin: 8px 0 0 20px; padding: 0; }
     li { margin: 4px 0; }
     .skills { margin-top: 6px; }
     .note { margin-top: 30px; color: #6b7280; font-size: 12px; }
     @media (max-width: 640px) {
       main { width: 100%; margin: 0; padding: 28px 22px; box-shadow: none; }
-      .role-head { display: block; }
+      .role-head, .title-row { display: block; }
       .location, .dates { white-space: normal; }
     }
     @media print {
@@ -47,8 +47,8 @@
   <h2>Experience</h2>
 
   <section class="role">
-    <div class="role-head"><div><span class="company">Intellia Therapeutics</span> <span class="location">Cambridge, MA</span></div><span class="dates">October 2024 – Present</span></div>
-    <div class="title">Senior Process Engineer I, LNP Engineering</div>
+    <div class="role-head"><div><span class="company">Intellia Therapeutics</span> <span class="location">Cambridge, MA</span></div></div>
+    <div class="title-row"><span class="title">Senior Process Engineer I, LNP Engineering</span><span class="dates">October 2024 – Present</span></div>
     <ul>
       <li>Oversee the manufacture of lipid nanoparticle drug products at external CDMOs.</li>
       <li>Perform person-in-plant work supporting tech transfer, clinical trial material generation, and drug product process validation campaigns.</li>
@@ -61,22 +61,24 @@
   </section>
 
   <section class="role">
-    <div class="role-head"><div><span class="company">Verve Therapeutics</span> <span class="location">Boston, MA</span></div><span class="dates">August 2022 – October 2024</span></div>
-    <div class="title">Engineer / Senior Engineer, LNP Process Development</div>
+    <div class="role-head"><div><span class="company">Verve Therapeutics</span> <span class="location">Boston, MA</span></div></div>
+    <div class="title-row"><span class="title">Engineer, LNP Process Development</span><span class="dates">August 2022 – October 2023</span></div>
+    <div class="title-row"><span class="title">Senior Engineer, LNP Process Development</span><span class="dates">October 2023 – October 2024</span></div>
     <ul>
-      <li>Executed studies to develop, optimize and characterize unit operations for LNP drug product manufacturing including filtration, TFF, mixing, and fill/finish.</li>
+      <li>Executed studies to develop, optimize and characterize unit operations for LNP drug product manufacturing including but not limited to filtration, TFF, mixing, and fill/finish.</li>
       <li>Wrote technical reports summarizing findings from experiments and recommending process improvements.</li>
       <li>Engaged with CDMOs to carry out facility fit and process gap assessments, leveraging historical data and conducting new experiments to establish GMP manufacturing operations for a new product.</li>
       <li>Managed a co-op and oversaw projects including batch data analytics and lipid dissolution characterization.</li>
       <li>Worked with analytics teams as an SME to develop novel analytical techniques for manufacturing.</li>
-      <li>Assessed and sourced manufacturing and PD scale equipment, including TFF skids, mixing vessels and HPLC pumps for nanoparticle formation.</li>
+      <li>Assessed and sourced manufacturing and PD scale equipment, including but not limited to TFF skids, mixing vessels and HPLC pumps for nanoparticle formation.</li>
       <li>Developed automated manufacturing data analysis capabilities in Excel and JMP.</li>
     </ul>
   </section>
 
   <section class="role">
-    <div class="role-head"><div><span class="company">Alnylam Pharmaceuticals</span> <span class="location">Cambridge, MA</span></div><span class="dates">September 2018 – August 2022</span></div>
-    <div class="title">Associate Engineer / Engineer I, Manufacturing Technical Services</div>
+    <div class="role-head"><div><span class="company">Alnylam Pharmaceuticals</span> <span class="location">Cambridge, MA</span></div></div>
+    <div class="title-row"><span class="title">Associate Engineer, Manufacturing Technical Services</span><span class="dates">September 2018 – January 2021</span></div>
+    <div class="title-row"><span class="title">Engineer I, Manufacturing Technical Services</span><span class="dates">January 2021 – August 2022</span></div>
     <ul>
       <li>Executed pilot scale manufacturing of lipid nanoparticles for ongoing investigational work.</li>
       <li>Assisted with external manufacturing operations by providing technical analysis and support.</li>
