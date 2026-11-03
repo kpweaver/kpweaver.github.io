@@ -61,7 +61,8 @@ nav a:hover, .footer-links a:hover, .project-link:hover { color: var(--accent); 
 .footer-links a { color: #4d554d; font-size: .78rem; font-weight: 600; text-decoration: none; }
 @media (max-width: 710px) {
   .wrap { width: min(100% - 32px, 1080px); }
-  .header-inner { min-height: 72px; }
+  .header-inner { min-height: 72px; flex-wrap: wrap; padding-block: 14px; gap: 8px 16px; }
+  nav { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; }
   nav { gap: 15px; }
   nav a { font-size: .8rem; }
   .hero { padding: 74px 0 70px; }
