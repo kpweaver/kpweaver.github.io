@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+	<title>Charts</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<style>
+body {
+    font-size: 24px;
+}
+table, th, td, tr {
+    padding: 20px;
+} 
+</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+// Tooltip only Text
+$('.masterTooltip').hover(function(){
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $('<p class="tooltip"></p>')
+        .text(title)
+        .appendTo('body')
+        .fadeIn('slow');
+}, function() {
+        // Hover out code
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+}).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
+});
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101340181-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+	<h1 style="font-size:36px">KEV’S CHARTS</h1>
+	<table style="width: 600px; font-size: 25px;">
+		<tr>
+			<th>
+			<a href="01_monthly.html">
+			REVIEWS
+			</a>
+			</th>
+			<th>
+			<a href="01_rotation.html">
+			IN ROTATION
+			</a>
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<a href="01_other.html">
+			OTHER CHARTS
+			</a>
+			</th>
+			<th>
+			<a href="https://rateyourmusic.com/~kweaver96">
+			RATEYOURMUSIC
+			</a>
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<a href="https://www.last.fm/user/kweaver96">
+			LAST.FM
+			</a>
+			</th>
+			<th>
+			<a href="https://open.spotify.com/user/orthoceras">
+			SPOTIFY
+			</a>
+			</th>
+		</tr>
+
+	</table>
+</body>
+
+<!--
+1:  #802020
+2:  #cc0a0a
+3:  #ff5e0d
+4:  #ffaa00
+5:  #ffff26
+6:  #aaff00
+7:  #11a65b
+8:  #2ea8e6
+9:  #5639e6
+10: #993d99
+-->
