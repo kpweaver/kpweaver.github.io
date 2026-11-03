@@ -1,104 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Charts</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<style>
-body {
-    font-size: 24px;
-}
-table, th, td, tr {
-    padding: 20px;
-} 
-</style>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-// Tooltip only Text
-$('.masterTooltip').hover(function(){
-        // Hover over code
-        var title = $(this).attr('title');
-        $(this).data('tipText', title).removeAttr('title');
-        $('<p class="tooltip"></p>')
-        .text(title)
-        .appendTo('body')
-        .fadeIn('slow');
-}, function() {
-        // Hover out code
-        $(this).attr('title', $(this).data('tipText'));
-        $('.tooltip').remove();
-}).mousemove(function(e) {
-        var mousex = e.pageX + 20; //Get X coordinates
-        var mousey = e.pageY + 10; //Get Y coordinates
-        $('.tooltip')
-        .css({ top: mousey, left: mousex })
-});
-});
-
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-101340181-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Kevin Weaver — biotech engineer building games, software tools, and small experiments.">
+  <title>Kevin Weaver — Projects &amp; Experiments</title>
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-	<h1 style="font-size:36px">KEV’S CHARTS</h1>
-	<table style="width: 600px; font-size: 25px;">
-		<tr>
-			<th>
-			<a href="01_monthly.html">
-			REVIEWS
-			</a>
-			</th>
-			<th>
-			<a href="01_rotation.html">
-			IN ROTATION
-			</a>
-			</th>
-		</tr>
-		<tr>
-			<th>
-			<a href="01_other.html">
-			OTHER CHARTS
-			</a>
-			</th>
-			<th>
-			<a href="https://rateyourmusic.com/~kweaver96">
-			RATEYOURMUSIC
-			</a>
-			</th>
-		</tr>
-		<tr>
-			<th>
-			<a href="https://www.last.fm/user/kweaver96">
-			LAST.FM
-			</a>
-			</th>
-			<th>
-			<a href="https://open.spotify.com/user/orthoceras">
-			SPOTIFY
-			</a>
-			</th>
-		</tr>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Kevin Weaver home">kw<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/kpweaver" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
 
-	</table>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="intro-heading">
+      <div class="eyebrow">Kevin Weaver / Boston, MA</div>
+      <h1 id="intro-heading">Engineer by day.<br><em>Curious builder</em><br>the rest of the time.</h1>
+      <p class="hero-intro">
+        I work in biotech process engineering and spend a lot of my free time
+        tinkering with games, software tools, and whatever else catches my interest.
+        This is a small collection of things I'm making.
+      </p>
+      <a class="hero-action" href="#projects">Explore the projects <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="projects wrap" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <div>
+          <div class="section-label">01 / The workbench</div>
+          <h2 id="projects-heading">Selected projects</h2>
+        </div>
+        <p class="section-subtitle">Mostly works in progress. All born from curiosity.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-top"><span class="project-number">001</span><span class="project-category">Game modding / Tooling</span></div>
+          <h3>Sky2k</h3>
+          <p>What if Skyrim had been made in 2002? A toolkit for reimagining its world with Morrowind's assets, aesthetics, and OpenMW engine.</p>
+          <div class="project-footer">
+            <span class="status">In development</span>
+            <a class="project-link" href="https://github.com/kpweaver/sky2k" target="_blank" rel="noopener noreferrer" aria-label="View Sky2k on GitHub">GitHub</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-number">002</span><span class="project-category">Roguelike / 3D</span></div>
+          <h3>100 Deep</h3>
+          <p>A first-person, controller-friendly way to play Angband, with its original game engine still running everything underneath.</p>
+          <div class="project-footer">
+            <span class="status">In development</span>
+            <a class="project-link" href="https://github.com/kpweaver/100-deep" target="_blank" rel="noopener noreferrer" aria-label="View 100 Deep on GitHub">GitHub</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-number">003</span><span class="project-category">Web app / MTG</span></div>
+          <h3>EDHCheck</h3>
+          <p>A deck-building companion for Magic: The Gathering that helps you find new Commanders using the cards you already own.</p>
+          <div class="project-footer">
+            <span class="status">In development</span>
+            <a class="project-link" href="https://github.com/kpweaver/EDHCheck" target="_blank" rel="noopener noreferrer" aria-label="View EDHCheck on GitHub">GitHub</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="project-number">004</span><span class="project-category">Android / E-paper</span></div>
+          <h3>E-Paper Tokens</h3>
+          <p>An Android app concept for designing custom MTG tokens and programming them onto reusable, NFC-powered e-paper cards.</p>
+          <div class="project-footer">
+            <span class="status">Prototype</span>
+            <span class="small-label">Not yet public</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="wrap about-grid">
+        <div>
+          <div class="section-label">02 / A little about me</div>
+          <h2 id="about-heading">Hello again.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I'm a Boston-area chemical/process engineer working in biotech. My day job involves manufacturing processes, data, and finding ways to make complex systems work a little better.</p>
+          <p>Outside of work, I like old-school RPGs, game design, building things with code, and exploring the overlap between physical and digital tools.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-note">© 2026 Kevin Weaver · Built with plain HTML &amp; CSS.</p>
+      <div class="footer-links">
+        <a href="https://github.com/kpweaver" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="charts.html">Kev's Charts (archive) ↗</a>
+      </div>
+    </div>
+  </footer>
 </body>
-
-<!--
-1:  #802020
-2:  #cc0a0a
-3:  #ff5e0d
-4:  #ffaa00
-5:  #ffff26
-6:  #aaff00
-7:  #11a65b
-8:  #2ea8e6
-9:  #5639e6
-10: #993d99
--->
+</html>
